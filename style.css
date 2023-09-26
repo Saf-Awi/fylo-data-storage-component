@@ -197,6 +197,12 @@ span {
 }
 
 @media screen and (max-width: 768px) {
+        body {
+        background-image: url(./images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+    }
     .card-container {
         flex-direction: column;
         gap: 0;
