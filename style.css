@@ -1,0 +1,252 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --orange-gradient: hsl(6, 100%, 80%);
+    --pink-gradient: hsl(335, 100%, 65%);
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--pale-blue);
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    background-color: var(--very-dark-blue);
+    background-image: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.flex {
+    display: flex;
+}
+
+.card-container {
+    gap: 20px;
+}
+
+.left-card, .right-card {
+    background-color: var(--dark-blue);
+}
+
+.hidden {
+    display: none;
+}
+
+/*---------------Left card---------------*/
+
+.left-card {
+    width: 300px;
+    height: 150px;
+    padding: 30px;
+    border-radius: 20px 100px 20px 20px;
+}
+
+.fylo-logo {
+    margin: 10px 0 35px 20px;
+}
+
+.share-icons {
+    gap: 10px;
+    align-items: center;
+    margin: 0 0 0 20px;
+}
+
+.share-icon {
+    background-color: var(--very-dark-blue);
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;    
+
+    
+}
+
+.icon {
+    position: relative;
+}
+
+.document {
+    top: 7px;
+    left: 10px;
+}
+
+.folder {
+    top: 10px;
+    left: 7px;
+}
+
+.upload {
+    top: 12px;
+    left: 8px;
+}
+
+.icon path:hover {
+    fill: var(--pink-gradient);
+    cursor: pointer;
+}
+
+/*---------------right card---------------*/
+
+.right-card {
+    width: 450px;
+    height: 100px;
+    padding: 30px 60px 30px 30px;
+    border-radius: 20px;
+    position: relative;
+    top: 51px;
+    
+}
+.progress-container {
+    width: 450px;
+    height: 20px;
+    background-color: var(--very-dark-blue);
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.progress-bar {
+    background: linear-gradient(
+        to right,
+        var(--orange-gradient),
+        var(--pink-gradient)
+    );
+
+    width: 330px;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.gb {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--pale-blue);
+    z-index: 88;
+    position: absolute;
+    right: 180px;
+    bottom: 66px;
+}
+
+.pop-up {
+    z-index: 999;
+    background-color: white;
+    height: 60px;
+    width: 150px;
+    color: var(--grayish-blue);
+    font-weight: 600;
+    border-radius: 10px;
+    position: absolute;
+    right: 40px;
+    top: -40px;
+    padding-left: 10px;
+    
+}
+
+
+
+span {
+    color: var(--very-dark-blue);
+    font-size: 30px;
+    margin-right: 6px;
+}
+
+.gb-left {
+    margin-left: 10px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid white; 
+    transform: rotate(180deg);
+    position: absolute;
+    right: 0;
+    top: 52px;
+    
+
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+    font-size: 15px; 
+    text-align: center; 
+    font-weight: 600;
+}
+.attribution a { 
+    color: var(--pink-gradient); 
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    .right-card {
+        width: 270px;
+        height: 120px;
+        top: 20px;       
+    }
+
+    .progress-container {
+        width: 300px;
+    }
+
+    .progress-bar {
+        width: 230px;
+    }
+
+    .circle {
+        top: 79px;
+        right: 100px;
+    }
+
+    .pop-up {
+        top: 150px;
+        right: 100px;
+        
+    }
+
+    .attribution {
+        left: 14%;
+        font-size: 13px;
+    }
+
+    .fylo-logo {
+        margin: 10px 0 35px 50px;
+       
+    }
+    
+    .share-icons {
+        margin: 0 0 0 50px;
+    }
+
+}
+
+
+
+
